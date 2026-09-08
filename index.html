@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
     <title>WDD 131 – Dynamic Web Fundamentals – Kamal Udumulla Hele</title>
 </head>
 
@@ -24,7 +24,7 @@
 
     <nav>
         <ul>
-            <li><a href="Linkedin.com">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/kamal-udumulla-hele-8156739b">LinkedIn</a></li>
             <li><a href="https://byupw.instructure.com/">iLearn</a></li>
             <li><a href="https://www.churchofjesuschrist.org/study/scriptures">Scripture</a></li>
             <li><a href="resources.html">Final Project</a></li>
@@ -36,7 +36,19 @@
             <h2>About Me</h2>
             <p>Hello! I'm Kamal Udumullahele, a student in WDD 131 – Dynamic Web Fundamentals. I am passionate about
                 learning web development and creating dynamic, responsive, and accessible web applications.</p>
-                <link rel="image-kamal" href="image-kamal.png">
+            <img src="images/kamal.png" alt="Kamal Udumulla Hele">
+            <div class="card-location me">
+                <h3>Alberta, Canada</h3>
+                <p>I am currently residing in Alberta, Canada. Alberta is a vibrant province in Western Canada, known
+                    for its Rocky Mountain landscapes, wide open prairies, and
+                    welcoming communities. From the energy of Calgary to the natural beauty of Banff and Jasper, Alberta
+                    blends adventure,
+                    culture, and opportunity in one unforgettable place.</p>
+                <figure>
+                    <img src="images/canada.png" alt="Canada flag">
+                    <figcaption>Flag of Canada</figcaption>
+                </figure>
+            </div>
         </section>
         <section class="card-web dev resources">
             <h2>Web Dev Resources</h2>
@@ -46,11 +58,12 @@
                 <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
                 <li><a href="https://stackoverflow.com/">Stack Overflow</a></li>
                 <li><a href="https://codepen.io/">CodePen</a></li>
+
             </ul>
         </section>
     </main>
     <footer>
-        <p>&copy;<span id="currentyear"></span> Kamal Udumullahele |Canada</p>
+        <p>copyright &copy; <span id="currentyear"></span> Kamal Udumullahele | Canada</p>
         <p id="lastModified"></p>
     </footer>
 </body>

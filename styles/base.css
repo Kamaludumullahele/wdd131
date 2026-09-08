@@ -1,12 +1,12 @@
 * {
     margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: "Cormorant Garamond", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
+
 header {
     background-color: orange;
     color: white;
@@ -25,6 +25,7 @@ header span {
     background-color: orange;
     color: white;
 }
+
 nav {
     background-color: #36454f;
     margin: 0 auto;
@@ -32,6 +33,7 @@ nav {
     color: white;
     height: 3rem;
 }
+
 nav ul {
     list-style: none;
     display: flex;
@@ -40,21 +42,25 @@ nav ul {
     font-size: 1.2rem;
     height: 100%;
 }
+
 nav ul li {
     flex: 1;
     text-align: center;
 }
+
 nav ul li a {
     display: block;
     color: white;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     margin: 1px;
     background-color: #555;
     text-decoration: underline;
     display: block;
 }
+
 main {
     width: min(90%, 1200px);
     margin: 0 auto;
@@ -63,19 +69,40 @@ main {
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
 }
+
 main h1 {
     grid-column: 1 / -1;
     font-size: 3rem;
     text-align: center;
     margin: 1rem 0;
 }
+
 section.card-about.me {
     background-color: antiquewhite;
     padding: 1rem;
     border-radius: 8px;
     font-size: large;
     border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
 }
+
+section.card-about.me img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0 auto;
+}
+
+section.card-about.me p {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+
 section.card-web.dev.resources {
     background-color: antiquewhite;
     padding: 1rem;
@@ -83,6 +110,7 @@ section.card-web.dev.resources {
     font-size: large;
     border: 1px solid #ccc;
 }
+
 section h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -91,6 +119,74 @@ section h2 {
     color: white;
     text-align: center;
     padding: 1rem 0;
+}
+
+section.card-about.me h2 {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+    section.card-about.me {
+        grid-template-columns: 1fr;
+    }
+
+    section.card-about.me img,
+    section.card-about.me p {
+        grid-column: 1;
+        grid-row: auto;
+    }
+}
+
+div h3 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+section.card-about.me .card-location.me {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    align-items: center;
+    grid-column: 1 / -1;
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+section.card-about.me .card-location.me h3 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+}
+
+section.card-about.me .card-location.me figure {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    text-align: center;
+}
+
+section.card-about.me .card-location.me figure img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+}
+
+section.card-about.me .card-location.me p {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+@media (max-width: 600px) {
+    section.card-about.me .card-location.me {
+        grid-template-columns: 1fr;
+    }
+
+    section.card-about.me .card-location.me h3,
+    section.card-about.me .card-location.me figure,
+    section.card-about.me .card-location.me p {
+        grid-column: 1;
+        grid-row: auto;
+    }
 }
 
 footer {
