@@ -49,3 +49,53 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+nav ul li a:hover {
+    margin: 1px;
+    background-color: #555;
+    text-decoration: underline;
+    display: block;
+}
+main {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+}
+main h1 {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+section.card-about.me {
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: large;
+    border: 1px solid #ccc;
+}
+section.card-web.dev.resources {
+    background-color: antiquewhite;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: large;
+    border: 1px solid #ccc;
+}
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    background-color: rgba(246, 198, 110, 0.948);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer {
+    background-color: orange;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
