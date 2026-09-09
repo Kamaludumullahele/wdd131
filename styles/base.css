@@ -8,28 +8,27 @@
 }
 
 header {
-    background-color: orange;
-    color: black;
+    background-color: #24577b;
+    color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    min-height: 8rem;
 }
 
 header span {
     display: block;
     font-weight: 700;
     font-size: 2rem;
-    align-content: center;
     text-align: center;
-    background-color: orange;
-    color: #36454f;
+    color: white;
+    padding: 1.5rem 1rem;
 }
 
 nav {
-    background-color: gray;
-    margin: 0 auto;
-    max-width: 1200px;
+    background-color: #333;
+    width: 100%;
     color: white;
     height: 3rem;
 }
@@ -52,6 +51,7 @@ nav ul li a {
     display: block;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 
 nav ul li a:hover {
