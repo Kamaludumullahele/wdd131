@@ -4,6 +4,22 @@ main {
 }
 
 @media (min-width: 601px) {
+    #menuButton {
+        display: none;
+    }
+
+    nav ul.nav-list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 1rem;
+        font-weight: 500;
+        font-size: 1.5rem;
+        background-color: black;
+    }
+
     .temple-gallery {
         display: grid;
         grid-template-columns: repeat(3, 300px);
