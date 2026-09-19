@@ -10,10 +10,13 @@ main {
         justify-content: space-between;
         padding: 0 1.5rem;
         background-color: purple;
+        max-width: 1000px;
+        margin: 0 auto;
     }
 
-    header h1, header nav {
-        flex: 1 2 0;
+    header h1,
+    header nav {
+        flex: 1 2;
     }
 
     #menuButton {
@@ -63,6 +66,12 @@ figcaption {
     text-align: center;
     font-size: .8rem;
     color: #333;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: lightgray;
 }
 
 footer {
