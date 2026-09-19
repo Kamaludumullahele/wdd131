@@ -21,7 +21,7 @@
     nav>ul.nav-list {
         display: flex;
         flex-direction: row;
-        background-color: purple;
+        background-color: black;
     }
 
     .temple-gallery {
