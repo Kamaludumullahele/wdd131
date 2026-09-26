@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Information about Sri Lanka">
+    <meta name="author" content="Kamal Udumulla Hele">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=partly_cloudy_day" />
+    <script src="../scripts/place.js" defer></script>
+    <title>Place</title>
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+
+<body>
+    <header>
+        <h1>Sri Lanka</h1>
+    </header>
+    <main>
+        <div class="place-layout">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/hero-srilanka-large.webp" media="(min-width: 1200px)" type="image/webp">
+                    <source srcset="images/hero-srilanka-small.webp" media="(min-width: 500px)" type="image/webp">
+                    <img src="images/hero-srilanka-small.webp" alt="Scenic view of Sri Lanka">
+                </picture>
+            </div>
+            <section class="weather">
+                <h2 id="weather-section"><span class="material-symbols-outlined weather-icon" aria-hidden="true">partly_cloudy_day</span>Weather</h2>
+                <p id="weather-status" role="status" aria-live="polite">Loading current weather...</p>
+                <dl id="weather-details" hidden>
+                    <div>
+                        <dt>Temperature</dt>
+                        <dd id="weather-temperature"></dd>
+                    </div>
+                    <div>
+                        <dt>Conditions</dt>
+                        <dd id="weather-condition"></dd>
+                    </div>
+                    <div>
+                        <dt>Wind</dt>
+                        <dd id="weather-wind"></dd>
+                    </div>
+                    <div>
+                        <dt>Wind Chill</dt>
+                        <dd id="weather-wind-chill"></dd>
+                    </div>
+                </dl>
+            </section>
+            <section class="Data">
+                <h2 id="data-section">Data</h2>
+                <dl>
+                    <div>
+                        <dt>Administrative Capital</dt>
+                        <dd>Sri Jayawardenepura Kotte</dd>
+                    </div>
+                    <div>
+                        <dt>Largest City</dt>
+                        <dd>Colombo</dd>
+                    </div>
+                    <div>
+                        <dt>Official Languages</dt>
+                        <dd>Sinhala and Tamil</dd>
+                    </div>
+                    <div>
+                        <dt>Currency</dt>
+                        <dd>Sri Lankan rupee (LKR)</dd>
+                    </div>
+                    <div>
+                        <dt>Area</dt>
+                        <dd>65,610 km²</dd>
+                    </div>
+                </dl>
+            </section>
+        </div>
+
+        <footer>
+            <p>copyright &copy; <span id="currentyear"></span> Kamal Udumullahele | Canada</p>
+            <p id="lastModified"></p>
+        </footer>
+    </main>
+
+</body>
+
+</html>
