@@ -1,13 +1,31 @@
+:root:root {
+    --color-header: lightgreen;
+    --color-page: lightyellow;
+    --color-accent: #4b7f52;
+    --color-panel: rgb(255 255 255 / 88%);
+    --color-border: #ccc;
+}
+
 header {
-    background-color: lightgreen;
+    background-color: var(--color-header);
     padding: 20px;
     text-align: center;
 }
+
 h1 {
     font-size: 2.5em;
     margin: 0;
     font-family: 'Roboto Serif', serif;
     padding: 10px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    margin: 6px auto 0;
+    background-color: var(--color-accent);
 }
 
 .weather h2 {
@@ -17,13 +35,14 @@ h1 {
 }
 
 .weather-icon {
-    font-size: 1.4em;
-    line-height: 1;
+    width: 1.4em;
+    height: 1.4em;
+    flex: 0 0 auto;
 }
 
 main {
     padding: 20px;
-    background-color: lightyellow;
+    background-color: var(--color-page);
 }
 
 .hero {
@@ -51,7 +70,7 @@ main {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
     align-items: baseline;
     gap: 8px;
-    border-left: 3px solid #4b7f52;
+    border-left: 3px solid var(--color-accent);
     padding-left: 10px;
 }
 
@@ -135,14 +154,16 @@ main {
     .hero {
         margin: 0;
     }
+
     section.weather {
         width: min(30%, 360px);
         display: block;
         margin: 0;
         padding: 0 16px 16px;
-        background-color: rgb(255 255 255 / 88%);
+        background-color: var(--color-panel);
         box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
     }
+
     section.weather,
     section.Data {
 
@@ -153,7 +174,7 @@ main {
         width: min(30%, 360px);
         margin: 0;
         padding: 0 16px 16px;
-        background-color: rgb(255 255 255 / 88%);
+        background-color: var(--color-panel);
         box-shadow: 0 2px 10px rgb(0 0 0 / 25%);
     }
 
@@ -173,10 +194,10 @@ main {
 }
 
 footer {
-    background-color: lightgreen;
+    background-color: var(--color-header);
     padding: 5px;
     text-align: center;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
     font-size: 18px;
 }
