@@ -1,5 +1,6 @@
+// Script to fetch and display current weather for Sri Lanka and update footer information
 const weatherUrl = "https://api.open-meteo.com/v1/forecast?latitude=6.9271&longitude=79.8612&current=temperature_2m,weather_code,wind_speed_10m&wind_speed_unit=kmh&timezone=Asia%2FColombo";
-
+// Mapping of weather codes to descriptions
 const weatherDescriptions = {
     0: "Clear Sky",
     1: "Mainly Clear",
@@ -23,7 +24,7 @@ const weatherDescriptions = {
     96: "Thunderstorm with Hail",
     99: "Thunderstorm with Heavy Hail"
 };
-
+// Function to calculate wind chill based on temperature and wind speed
 function calculateWindChill(temperature, windSpeed) {
     if (temperature > 10 || windSpeed <= 4.8) {
         return "N/A";
@@ -35,7 +36,7 @@ function calculateWindChill(temperature, windSpeed) {
 
     return `${windChill.toFixed(1)} °C`;
 }
-
+// Function to display current weather
 async function showCurrentWeather() {
     const status = document.querySelector("#weather-status");
     const details = document.querySelector("#weather-details");
@@ -65,8 +66,10 @@ async function showCurrentWeather() {
         console.error(error);
     }
 }
-
+// Call the function to show current weather
 showCurrentWeather();
+
+// Update footer with current year and last modified date
 document.getElementById("currentyear").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = `Last Modified: ${document.lastModified}`;
 
