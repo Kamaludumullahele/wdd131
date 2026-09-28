@@ -24,6 +24,29 @@ const weatherDescriptions = {
     96: "Thunderstorm with Hail",
     99: "Thunderstorm with Heavy Hail"
 };
+const weatherIcons = {
+    0: "☀️",
+    1: "🌤️",
+    2: "🌤️",
+    3: "☁️",
+    45: "🌫️",
+    48: "🌫️",
+    51: "🌦️",
+    53: "🌦️",
+    55: "🌧️",
+    61: "🌧️",
+    63: "🌧️",
+    65: "🌧️",
+    71: "🌨️",
+    73: "🌨️",
+    75: "❄️",
+    80: "🌦️",
+    81: "🌦️",
+    82: "⛈️",
+    95: "⛈️",
+    96: "⛈️",
+    99: "⛈️"
+};
 // Function to calculate wind chill based on temperature and wind speed
 function calculateWindChill(temperature, windSpeed) {
     if (temperature > 10 || windSpeed <= 4.8) {
@@ -51,6 +74,8 @@ async function showCurrentWeather() {
         const current = data.current;
         const temperature = current.temperature_2m;
         const windSpeed = current.wind_speed_10m;
+        document.querySelector("#weather-section").dataset.weatherIcon =
+            weatherIcons[current.weather_code] ?? "🌤️";
 
         document.querySelector("#weather-temperature").textContent = `${temperature} °C`;
         document.querySelector("#weather-condition").textContent =
