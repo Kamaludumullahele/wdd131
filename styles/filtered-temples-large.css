@@ -1,0 +1,40 @@
+@media (min-width: 601px) {
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        background-color: purple;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    header h1,
+    header nav {
+        flex: 1 2;
+    }
+
+    #menuButton {
+        display: none;
+    }
+
+    nav>ul.nav-list {
+        display: flex;
+        flex-direction: row;
+        background-color: black;
+    }
+
+    .temple-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 300px);
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: lightgray;
+}
