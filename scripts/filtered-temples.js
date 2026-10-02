@@ -74,7 +74,7 @@ const temples = [
         location: "Metro Manila, Philippines",
         dedicated: "1984, September, 25",
         area: 26683,
-        imageUrl: "../week04/images/manila-temple.jpg"
+        imageUrl: "images/manila-temple.jpg"
     },
     {
         templeName: "Bountiful Utah",
@@ -82,7 +82,7 @@ const temples = [
         dedicated: "1995, January, 8",
         area: 104000,
         imageUrl:
-            "../week04/images/bountiful-utah-temple.jpeg"
+            "images/bountiful-utah-temple.jpeg"
     },
     {
         templeName: "Boise Idaho",
@@ -90,7 +90,7 @@ const temples = [
         dedicated: "1984, May, 25",
         area: 35868,
         imageUrl:
-            "../week04/images/boise-idaho-temple.jpeg"
+            "images/boise-idaho-temple.jpeg"
 
     }
 ];
