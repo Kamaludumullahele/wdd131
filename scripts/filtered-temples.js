@@ -105,7 +105,7 @@ function displayTemples(templeList) {
             <p><strong>Location:</strong> ${temple.location}</p>
             <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
             <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
+            <img loading="lazy" decoding="async" src="${temple.imageUrl}" alt="${temple.templeName} Temple">
         </div>
     `).join("");
 }
