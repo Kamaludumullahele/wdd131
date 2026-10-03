@@ -124,15 +124,18 @@ mainnav.addEventListener("click", event => {
 
     event.preventDefault();
 
-    if (filterLink.dataset.filter === "old") {
-        displayTemples(oldTemples);
-    } else if (filterLink.dataset.filter === "new") {
-        displayTemples(newTemples);
-    } else if (filterLink.dataset.filter === "small") {
-        displayTemples(smallTemples);
-    } else if (filterLink.dataset.filter === "large") {
-        displayTemples(largeTemples);
-    } else {
-        displayTemples(allTemples);
-    }
+    mainnav.querySelectorAll("[data-filter]").forEach(link => {
+        link.classList.remove("active");
+    });
+    filterLink.classList.add("active");
+
+    const filters = {
+        all: allTemples,
+        old: oldTemples,
+        new: newTemples,
+        small: smallTemples,
+        large: largeTemples
+    };
+
+    displayTemples(filters[filterLink.dataset.filter] ?? allTemples);
 });
