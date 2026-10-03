@@ -111,25 +111,28 @@ function displayTemples(templeList) {
 }
 
 const oldTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) < 1900);
-
-displayTemples(temples);
-// Event listener for filtering temples based on age
-mainnav.addEventListener("click", event => {
-    const filterLink = event.target.closest("[data-filter]");
-    if (!filterLink) return;
-
-    event.preventDefault();
-    displayTemples(filterLink.dataset.filter === "old" ? oldTemples : temples);
-});
-
-// making a filter for New Temples
 const newTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) >= 2000);
-displayTemples(newTemples);
-// event listener for filtering new temples based on age
+const smallTemples = temples.filter(temple => temple.area < 10000);
+const largeTemples = temples.filter(temple => temple.area > 90000);
+const allTemples = temples;
+
+displayTemples(allTemples);
+
 mainnav.addEventListener("click", event => {
     const filterLink = event.target.closest("[data-filter]");
     if (!filterLink) return;
 
     event.preventDefault();
-    displayTemples(filterLink.dataset.filter === "new" ? newTemples : temples);
+
+    if (filterLink.dataset.filter === "old") {
+        displayTemples(oldTemples);
+    } else if (filterLink.dataset.filter === "new") {
+        displayTemples(newTemples);
+    } else if (filterLink.dataset.filter === "small") {
+        displayTemples(smallTemples);
+    } else if (filterLink.dataset.filter === "large") {
+        displayTemples(largeTemples);
+    } else {
+        displayTemples(allTemples);
+    }
 });
