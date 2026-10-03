@@ -113,11 +113,23 @@ function displayTemples(templeList) {
 const oldTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) < 1900);
 
 displayTemples(temples);
-
+// Event listener for filtering temples based on age
 mainnav.addEventListener("click", event => {
     const filterLink = event.target.closest("[data-filter]");
     if (!filterLink) return;
 
     event.preventDefault();
     displayTemples(filterLink.dataset.filter === "old" ? oldTemples : temples);
+});
+
+// making a filter for New Temples
+const newTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) >= 2000);
+displayTemples(newTemples);
+// event listener for filtering new temples based on age
+mainnav.addEventListener("click", event => {
+    const filterLink = event.target.closest("[data-filter]");
+    if (!filterLink) return;
+
+    event.preventDefault();
+    displayTemples(filterLink.dataset.filter === "new" ? newTemples : temples);
 });
