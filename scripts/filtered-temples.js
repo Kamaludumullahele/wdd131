@@ -110,3 +110,23 @@ temples.forEach(temple => {
     `;
     templeGallary.innerHTML += templeCard;
 });
+
+const oldTemples = temples.filter(temple => {
+    const dedicatedYear = new Date(temple.dedicated).getFullYear();
+    return dedicatedYear < 2000;
+    // Only include temples dedicated before the year 2000
+});
+const oldTempleGallery = document.getElementById("old-temple-gallery");
+
+oldTemples.forEach(temple => {
+    const oldTempleCard = `
+        <div class="temple-card">
+        <h2>${temple.templeName}</h2>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
+        </div>
+    `;
+    oldTempleGallery.innerHTML += oldTempleCard;
+});
