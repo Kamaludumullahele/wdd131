@@ -110,7 +110,7 @@ function displayTemples(templeList) {
     `).join("");
 }
 
-const oldTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) < 2000);
+const oldTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) < 1900);
 
 displayTemples(temples);
 
