@@ -78,6 +78,22 @@ nav li:active {
     padding: 1rem;
 }
 
+.temple-card {
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid #d2d2d2;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.temple-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1.5rem;
+    box-shadow: 4px 8px rgba(70, 67, 67, 0.2);
+}
+
 @media (max-width: 600px) {
     .temple-gallery {
         flex-direction: column;
