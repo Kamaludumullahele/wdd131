@@ -95,14 +95,18 @@ const temples = [
     }
 ];
 
-const templeGallery = document.querySelector("#temple-gallery");
-if (templeGallery) {
-    templeGallery.innerHTML = temples.map((temple) => `
-        <article class="temple-card">
-            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
-            <h2>${temple.templeName}</h2>
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        </article>`).join("");
-}
+
+const templeGallary = document.getElementById("temple-gallery");
+
+temples.forEach(temple => {
+    const templeCard = `
+        <div class="temple-card">
+        <h2>${temple.templeName}</h2>
+        <p><strong>Location:</strong> ${temple.location}</p>
+        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
+        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
+        </div>
+    `;
+    templeGallary.innerHTML += templeCard;
+});
