@@ -48,9 +48,7 @@ nav .nav-list a.active {
 
     }
 
-    .temple-card img {
-        box-shadow: 0 2px 8px rgba(57, 55, 55, 0.2);
-    }
+    
     .temple-card h2 {
         margin: 0.5rem 0;
     }        
@@ -60,4 +58,8 @@ main {
     max-width: 1264px;
     margin: 0 auto;
     background-color: lightgray;
+}
+#temple-gallery img {
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
