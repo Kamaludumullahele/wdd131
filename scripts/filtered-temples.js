@@ -98,35 +98,26 @@ const temples = [
 
 const templeGallary = document.getElementById("temple-gallery");
 
-temples.forEach(temple => {
-    const templeCard = `
+function displayTemples(templeList) {
+    templeGallary.innerHTML = templeList.map(temple => `
         <div class="temple-card">
-        <h2>${temple.templeName}</h2>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
+            <h2>${temple.templeName}</h2>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
+            <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
         </div>
-    `;
-    templeGallary.innerHTML += templeCard;
-});
+    `).join("");
+}
 
-const oldTemples = temples.filter(temple => {
-    const dedicatedYear = new Date(temple.dedicated).getFullYear();
-    return dedicatedYear < 2000;
-    // Only include temples dedicated before the year 2000
-});
-const oldTempleGallery = document.getElementById("old-temple-gallery");
+const oldTemples = temples.filter(temple => Number(temple.dedicated.split(",")[0]) < 2000);
 
-oldTemples.forEach(temple => {
-    const oldTempleCard = `
-        <div class="temple-card">
-        <h2>${temple.templeName}</h2>
-        <p><strong>Location:</strong> ${temple.location}</p>
-        <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-        <p><strong>Size:</strong> ${temple.area.toLocaleString()} sq ft</p>
-        <img src="${temple.imageUrl}" alt="${temple.templeName} Temple" loading="lazy" decoding="async">
-        </div>
-    `;
-    oldTempleGallery.innerHTML += oldTempleCard;
+displayTemples(temples);
+
+mainnav.addEventListener("click", event => {
+    const filterLink = event.target.closest("[data-filter]");
+    if (!filterLink) return;
+
+    event.preventDefault();
+    displayTemples(filterLink.dataset.filter === "old" ? oldTemples : temples);
 });
