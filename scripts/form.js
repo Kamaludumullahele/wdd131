@@ -35,12 +35,14 @@ const products = [
 // Populate the product select dropdown with options from the products array
 const productSelect = document.getElementById("product");
 
-products.forEach(product => {
-    const option = document.createElement("option");
-    option.value = product.id;
-    option.textContent = product.name;
-    productSelect.appendChild(option);
-});
+if (productSelect) {
+    products.forEach(product => {
+        const option = document.createElement("option");
+        option.value = product.id;
+        option.textContent = product.name;
+        productSelect.appendChild(option);
+    });
+}
 
 // Handle review form submission and update review count in localStorage
 const reviewForm = document.querySelector(".review-form");
@@ -49,7 +51,7 @@ if (reviewForm) {
     reviewForm.addEventListener("submit", () => {
         let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
 
-    reviewCount += 1;
+        reviewCount += 1;
 
         localStorage.setItem("reviewCount", reviewCount);
     });
@@ -63,3 +65,4 @@ if (reviewCountElement) {
     reviewCountElement.textContent =
         `You have submitted ${reviewCount} reviews.`;
 }
+localStorage.removeItem("reviewCount");
