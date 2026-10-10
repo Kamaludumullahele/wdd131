@@ -45,16 +45,21 @@ products.forEach(product => {
 // Handle review form submission and update review count in localStorage
 const reviewForm = document.querySelector(".review-form");
 
-reviewForm.addEventListener("submit", () => {
-    let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
+if (reviewForm) {
+    reviewForm.addEventListener("submit", () => {
+        let reviewCount = Number(localStorage.getItem("reviewCount")) || 0;
 
     reviewCount += 1;
 
-    localStorage.setItem("reviewCount", reviewCount);
-});
+        localStorage.setItem("reviewCount", reviewCount);
+    });
+}
 
 // Display the review count on the confirmation page
-const reviewCount = localStorage.getItem("reviewCount") || 0;
+const reviewCountElement = document.querySelector("#review-count");
+if (reviewCountElement) {
+    const reviewCount = localStorage.getItem("reviewCount") || 0;
 
-document.querySelector("#review-count").textContent =
-    `You have submitted ${reviewCount} reviews.`;
+    reviewCountElement.textContent =
+        `You have submitted ${reviewCount} reviews.`;
+}
