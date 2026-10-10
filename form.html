@@ -10,59 +10,77 @@
     <link rel="stylesheet" href="styles/form.css">
     <link rel="stylesheet" href="styles/form-large.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="scripts/form.js" defer></script>
-    <title>Product Review Form</Form:get>
-    </title>
+    <title>Product Review Form</title>
 </head>
 
 <body>
-    <h1>Product Review</h1>
-    <form action="reveiw.html" method="get"></form>
-    <div>Product Name</div>
-    <label><select name="Product" id="#" required>
-            <option value="" disabled selected>Select a Product...</option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-            <option value=""></option>
-        </select></label>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form class="review-form" action="reveiw.html" method="get">
+            <div class="form-field">
+                <label class="field-title" for="product">Product Name</label>
+                <select name="Product" id="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+            </div>
 
-    <div>Overall Rating</div>
-    <label><input type="radio" name="rating" id="1-star" required>&star;</label>
-    <label><input type="radio" name="rating" id="2-star" required>&star;&star;</label>
-    <label><input type="radio" name="rating" id="3-star" required>&star;&star;&star;</label>
-    <label><input type="radio" name="rating" id="4-star" required>&star;&star;&star;&star;</label>
-    <label><input type="radio" name="rating" id="5-star" required>&star;&star;&star;&star;&star;</label>
-    
-    <div>Date of Installation</div>
-    <label for="date"><input type="date" id="date" name="date" required></label>
+            <fieldset class="rating-field">
+                <legend>Overall Rating</legend>
+                <div class="rating-options">
+                    <label><span aria-hidden="true">&#9734;</span><input type="radio" name="rating" value="1"
+                            required><span class="visually-hidden">1 star</span></label>
+                    <label><span aria-hidden="true">&#9734;&#9734;</span><input type="radio" name="rating"
+                            value="2"><span class="visually-hidden">2 stars</span></label>
+                    <label><span aria-hidden="true">&#9734;&#9734;&#9734;</span><input type="radio" name="rating"
+                            value="3"><span class="visually-hidden">3 stars</span></label>
+                    <label><span aria-hidden="true">&#9734;&#9734;&#9734;&#9734;</span><input type="radio" name="rating"
+                            value="4"><span class="visually-hidden">4 stars</span></label>
+                    <label><span aria-hidden="true">&#9734;&#9734;&#9734;&#9734;&#9734;</span><input type="radio"
+                            name="rating" value="5"><span class="visually-hidden">5 stars</span></label>
+                </div>
+            </fieldset>
 
-    <div>Which features did you find useful in the product?</div>
-    <sub>(Check all that apply)</sub>
-    <label><input type="checkbox" name="durability" value="yes" id="checkbox1">Durability</label>
-    <label><input type="checkbox" name="useer friendlyness" value="yes" id="checkbox2">Ease of Use</label>
-    <label><input type="checkbox" name="performance" value="yes" id="checkbox3">Performance</label>
-    <label><input type="checkbox" name="design" value="yes" id="checkbox4">Design</label>
+            <div class="form-field">
+                <label class="field-title" for="date">Date of Installation</label>
+                <input type="date" id="date" name="date" required>
+            </div>
 
-    <div>Writen Review(optional)</div>
-    <textarea name="textarea" id="textarea"></textarea>
+            <fieldset class="feature-field">
+                <legend>Which features did you find useful in the product?</legend>
+                <p class="hint">(Check all that apply)</p>
+                <label><input type="checkbox" name="durability" value="yes">Durability</label>
+                <label><input type="checkbox" name="ease-of-use" value="yes">Ease of Use</label>
+                <label><input type="checkbox" name="performance" value="yes">Performance</label>
+                <label><input type="checkbox" name="design" value="yes">Design</label>
+            </fieldset>
 
-    <div>Your Name (Optional)</div>
-    <label><input type="text" name="user name" id="user name"></label>
-    
-    <div></div>
-    <input type="submit" value="Post Your Review">
+            <div class="form-field">
+                <label class="field-title" for="review">Written Review <span class="optional">(Optional)</span></label>
+                <textarea name="review" id="review"></textarea>
+            </div>
 
+            <div class="form-field">
+                <label class="field-title" for="user-name">Your Name <span class="optional">(Optional)</span></label>
+                <input type="text" name="user-name" id="user-name">
+            </div>
+
+            <button type="submit">Post Your Review</button>
+        </form>
+    </main>
+    <footer>
+        <p>Copyright &copy; <span id="currentyear"></span> Kamal Udumullahele | Canada</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
-<footer>
-    <p>copyright &copy; <span id="currentyear"></span> Kamal Udumullahele | Canada</p>
-    <p id="lastModified"></p>
-</footer>
 
 </html>
