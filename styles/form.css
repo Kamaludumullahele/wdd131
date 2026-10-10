@@ -63,6 +63,7 @@ textarea {
     background: #fff;
     font: inherit;
     font-size: 1.2rem;
+    font-family: "Roboto", sans-serif;
 }
 
 textarea {
@@ -156,7 +157,7 @@ button:hover {
 
 :focus-visible {
     outline: 3px solid #542451;
-    outline-offset: 2px;
+    outline-offset: 4px;
 }
 
 .visually-hidden {
