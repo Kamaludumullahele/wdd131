@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Building a HTML form with a confirmation page following best HTML,CSS and JavaScript practices">
+    <meta name="author" content="Kamal Udumulla Hele">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/form.js" defer></script>
+    <title>Product Review Form</Form:get>
+    </title>
+</head>
+
+<body>
+    <h1>Product Review</h1>
+    <form action="reveiw.html" method="get"></form>
+    <div>Product Name</div>
+    <label><select name="Product" id="#" required>
+            <option value="" disabled selected>Select a Product...</option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select></label>
+
+    <div>Overall Rating</div>
+    <label><input type="radio" name="rating" id="1-star" required>&star;</label>
+    <label><input type="radio" name="rating" id="2-star" required>&star;&star;</label>
+    <label><input type="radio" name="rating" id="3-star" required>&star;&star;&star;</label>
+    <label><input type="radio" name="rating" id="4-star" required>&star;&star;&star;&star;</label>
+    <label><input type="radio" name="rating" id="5-star" required>&star;&star;&star;&star;&star;</label>
+    
+    <div>Date of Installation</div>
+    <label for="date"><input type="date" id="date" name="date" required></label>
+
+    <div>Which features did you find useful in the product?</div>
+    <sub>(Check all that apply)</sub>
+    <label><input type="checkbox" name="durability" value="yes" id="checkbox1">Durability</label>
+    <label><input type="checkbox" name="useer friendlyness" value="yes" id="checkbox2">Ease of Use</label>
+    <label><input type="checkbox" name="performance" value="yes" id="checkbox3">Performance</label>
+    <label><input type="checkbox" name="design" value="yes" id="checkbox4">Design</label>
+
+    <div>Writen Review(optional)</div>
+    <textarea name="textarea" id="textarea"></textarea>
+
+    <div>Your Name (Optional)</div>
+    <label><input type="text" name="user name" id="user name"></label>
+
+    <input type="submit" value="Post Your Product Review">
+    
+</body>
+<footer>
+    <p>copyright &copy; <span id="currentyear"></span> Kamal Udumullahele | Canada</p>
+    <p id="lastModified"></p>
+</footer>
+
+</html>
