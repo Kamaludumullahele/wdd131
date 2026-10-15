@@ -1,9 +1,7 @@
 :root {
     --ocean-blue: #00A8CC;
-    --jungle-green: #2E8B57;
-    --sunset-gold: #F4B400;
-    --heritage-maroon: #8D153A;
-    --sand: #FAF3E0;
+    --jungle-green: #2e7d32;
+    --sunset-gold: #f9a925
 }
 
 * {
@@ -15,7 +13,7 @@ body {
     margin: 0 auto;
     padding: 0 1rem 2rem;
     color: #26332d;
-    background-color: var(--sand);
+    background-color: #FAF3E0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
@@ -47,7 +45,7 @@ section {
 
 h2 {
     margin-top: 0;
-    color: var(--heritage-maroon);
+    color: var(--ocean-blue);
 }
 
 h3 {
@@ -62,7 +60,7 @@ pre {
     overflow-x: auto;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: var(--sand);
+    background-color: #FAF3E0;
     font-size: 0.85rem;
     line-height: 1.3;
 }
