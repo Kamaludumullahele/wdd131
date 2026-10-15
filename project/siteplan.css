@@ -79,3 +79,10 @@ li::marker {
         padding: 2rem;
     }
 }
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: var(--jungle-green);
+    color: #fff;
+    border-top: 0.35rem solid var(--ocean-blue);
+}
