@@ -1,0 +1,10 @@
+@media (max-width: 500px) {
+    body {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    section {
+        padding: 1rem;
+    }
+}
