@@ -67,6 +67,8 @@ header nav a {
     text-align: center;
     background: none;
     border-radius: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 header nav a:hover,
