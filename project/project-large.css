@@ -27,11 +27,19 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2rem;
+    font-family: "Caveat", cursive;
+    font-size: 4rem;
+    font-weight: 700;
     line-height: 1.2;
-    font: bold 2rem Arial, sans-serif;
     align-content: center;
 
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.8rem;
+    font-family: "Caveat",
+        cursive;
 }
 
 header nav {
