@@ -204,8 +204,24 @@ header nav a[aria-current="page"] {
     text-align: center;
 }
 
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.image-grid h2 {
+    grid-column: 1 / -1;
+    margin: 0;
+}
+
+.image-grid .card img {
+    aspect-ratio: 16 / 9;
+}
+
 @media (min-width: 40rem) {
-    .card-grid {
+    .card-grid,
+    .image-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
