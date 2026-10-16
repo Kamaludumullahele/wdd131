@@ -126,12 +126,10 @@ header nav a[aria-current="page"] {
 }
 
 .button {
-    padding: 0.7rem 1.5rem;
-    border-radius: 0.4rem;
-    color: #26332d;
-    background-color: var(--sunset-gold);
+    border: none;
+    cursor: pointer;
+    font: inherit;
     font-weight: bold;
-    text-decoration: none;
 }
 
 .button:hover,
@@ -207,4 +205,37 @@ footer {
     background-color: var(--jungle-green);
     color: #fff;
     border-top: 0.35rem solid var(--ocean-blue);
+}
+
+fieldset.form-group {
+    margin: 0 0 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #b9b9b9;
+    border-radius: 0.4rem;
+}
+
+legend {
+    padding: 0 0.4rem;
+    font-weight: bold;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    padding: 0;
+    accent-color: var(--ocean-blue);
+}
+
+#savedMessages {
+    overflow-x: auto;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    background-color: #fff;
+    white-space: pre-wrap;
 }
