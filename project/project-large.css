@@ -1,7 +1,7 @@
 :root {
     --ocean-blue: #00A8CC;
     --jungle-green: #2e7d32;
-    --sunset-gold: #f9a925
+    --sunset-gold: #f9a925;
 }
 
 * {
@@ -97,6 +97,7 @@ header nav a[aria-current="page"] {
 
 .hero-wrapper {
     position: relative;
+    margin-bottom: 1rem;
 }
 
 .hero {
@@ -269,5 +270,5 @@ input[type="radio"] {
 
 #contactForm button[type="submit"]:hover,
 #contactForm button[type="submit"]:focus {
-    background-color: var(--ocean-blue);
+    background-color: var(--jungle-green);
 }
