@@ -125,17 +125,32 @@ header nav a[aria-current="page"] {
     color: #fff;
 }
 
-.button {
-    border: none;
+.hero-content button,
+.hero-content a {
+    display: inline-block;
+    padding: 1rem 1rem;
+    border: 3px solid #fff;
+    border-radius: 2rem;
+    color: #1b1b1b;
+    background-color: var(--sunset-gold);
+    box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 50%);
     cursor: pointer;
     font: inherit;
+    font-size: 0.8rem;
     font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
 
-.button:hover,
-.button:focus {
+.hero-content button:hover,
+.hero-content button:focus,
+.hero-content a:hover,
+.hero-content a:focus {
     color: #fff;
     background-color: var(--ocean-blue);
+    transform: scale(1.08);
 }
 
 .card-grid {
@@ -228,7 +243,7 @@ legend {
 }
 
 input[type="radio"] {
-    padding: 0;
+    padding: 0.5rem;
     accent-color: var(--ocean-blue);
 }
 
@@ -238,4 +253,21 @@ input[type="radio"] {
     border-radius: 0.4rem;
     background-color: #fff;
     white-space: pre-wrap;
+}
+
+#contactForm button[type="submit"] {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    color: #fff;
+    background-color: var(--ocean-blue);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+#contactForm button[type="submit"]:hover,
+#contactForm button[type="submit"]:focus {
+    background-color: var(--ocean-blue);
 }
