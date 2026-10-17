@@ -32,6 +32,8 @@ function renderMessages() {
     }
 }
 
+renderMessages();
+
 function downloadMessages() {
     const blob = new Blob([getMessagesText()], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
@@ -63,4 +65,3 @@ if (contactForm) {
         contactForm.reset();
     });
 }
-
