@@ -220,6 +220,7 @@ header nav a[aria-current="page"] {
 }
 
 @media (min-width: 40rem) {
+
     .card-grid,
     .image-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -304,4 +305,45 @@ input[type="radio"] {
 html {
     scrollbar-gutter: stable;
     /* always reserve the scrollbar space */
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+}
+
+.tip-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0.15rem 0.5rem rgb(0 0 0 / 10%);
+}
+
+.tip-card h3 {
+    margin: 0.5rem 0;
+}
+
+.tip-card p {
+    margin: 0;
+}
+
+.tip-icon {
+    display: block;
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+@media (min-width: 40rem) {
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.header-content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
